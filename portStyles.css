@@ -15,6 +15,7 @@ body {
   font-optical-sizing: auto;
   position: relative;
   color: white;
+  overflow-x: hidden;
   /* background: #0e1217; */
   background: #1c1141;
 }
@@ -25,6 +26,7 @@ html {
   accent-color: rgb(112 64 255 / 1);
   scrollbar-color: var(--scrollbar-thumb, initial)
     var(--scrollbar-track, initial);
+  overflow-x: hidden;
 }
 header {
   display: flex;
@@ -32,7 +34,8 @@ header {
   justify-content: space-between;
   width: 100%;
   margin: auto;
-  position: sticky;
+  /* position: sticky; */
+  position: fixed;
   top: 0;
   padding: 10px;
   background: rgba(255, 255, 255, 0.27);
@@ -54,6 +57,10 @@ header .logo::after {
   left: 1rem;
   top: 17px;
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 /* header .logo img::after {
   content: "";
@@ -82,6 +89,7 @@ header .socials a:hover {
 
 /* ? ===== MAIN section ==== */
 main {
+  margin-top: 100px;
   margin-left: 10%;
 }
 main section {
@@ -162,9 +170,11 @@ main section.about h2.job-me {
 
 main section.about article.about-me {
   font-size: 1.25rem;
+  text-align: center;
   line-height: 1.75rem;
   padding: 20px;
   font-weight: 600;
+  text-align: start;
 }
 
 body > main > nav.nav-it > a {
@@ -200,7 +210,10 @@ body > main > nav.nav-it {
   flex-direction: column;
   justify-content: space-between;
   width: 5%;
-  min-width: 45px;
+  /*min-width: 45px;
+  */
+  min-width: 55px;
+  opacity: 0.4;
   background: black;
   gap: 48px;
   border-radius: 43px;
@@ -211,7 +224,9 @@ body > main > nav.nav-it {
   left: 13px;
   top: 30%;
 }
-
+body > main > nav.nav-it:hover {
+  opacity: 1;
+}
 body > main > nav.nav-it > a.about-me-anchor > i.about-me-icon:after {
   content: "About";
   font-size: 14px;
@@ -331,7 +346,7 @@ body > main > nav.nav-it > a.pjs-icon:hover::after {
   justify-content: center;
   padding: 25px;
   flex-wrap: wrap;
-  width: 72%;
+  width: 89%;
   gap: 30px;
   margin: auto;
   background: rgba(255, 255, 255, 0.2);
@@ -628,6 +643,7 @@ div.slider
 }
 #contact.active {
   bottom: 54px;
+  z-index: 99999999999999999;
   display: block;
 }
 #contact {
@@ -746,7 +762,128 @@ div.divider > h3 {
 }
 
 /* ? media queries :  */
+
+@media (max-width: 311px) {
+  main section.about h1.name {
+    font-size: 1.4em;
+  }
+  #dyn-text,
+  #pipe {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 312px) and (max-width: 387px) {
+  main section.about h1.name {
+    font-size: 2em;
+  }
+
+  #dyn-text,
+  #pipe {
+    font-size: 2.1em;
+  }
+}
+
+@media (min-width: 388px) and (max-width: 432px) {
+  main section.about h1.name {
+    font-size: 2.2em;
+  }
+  #dyn-text,
+  #pipe {
+    font-size: 2.3em;
+  }
+}
+
+@media (min-width: 433px) and (max-width: 506px) {
+  main section.about h1.name {
+    font-size: 2.7em;
+  }
+  #dyn-text,
+  #pipe {
+    font-size: 2.8em;
+  }
+}
+
+@media (min-width: 507px) and (max-width: 589px) {
+  main section.about h1.name {
+    font-size: 3em;
+  }
+  #dyn-text,
+  #pipe {
+    font-size: 3.1em;
+  }
+}
+
+@media (min-width: 590px) and (max-width: 647px) {
+  main section.about h1.name {
+    font-size: 3.4em;
+  }
+  #dyn-text,
+  #pipe {
+    font-size: 3.5em;
+  }
+}
+
+@media (min-width: 648px) and (max-width: 677px) {
+  main section.about h1.name {
+    font-size: 4em;
+  }
+  #dyn-text,
+  #pipe {
+    font-size: 4.1em;
+  }
+}
+
+@media (min-width: 678px) and (max-width: 1068px) {
+  main section.about h1.name {
+    font-size: 4.8em;
+  }
+  #dyn-text,
+  #pipe {
+    font-size: 4.9em;
+  }
+}
+@media (min-width: 1069px) and (max-width: 1316px) {
+  main section.about h1.name {
+    font-size: 7em;
+  }
+  #dyn-text,
+  #pipe {
+    font-size: 7.1em;
+  }
+}
 @media (max-width: 940px) {
+  .slider {
+    width: 100%;
+  }
+  .pj-item .info {
+    width: 100%;
+  }
+}
+/* 
+@media (max-width: 700px) {
+  #about > h1 {
+    font-size: 3.7em;
+    letter-spacing: 0;
+  }
+  
+   
+  #dyn-text {
+    font-size: 3em;
+    letter-spacing: 0;
+  }
+  #dyn-tex {
+    font-size: 0.5em;
+  }
+  div.divider > h3 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  div.divider {
+    gap: 2px;
+  }
+}*/
+/* @media (max-width: 940px) {
   .slider {
     width: 100%;
   }
@@ -757,18 +894,23 @@ div.divider > h3 {
   #dyn-text {
     font-size: 4em;
   }
-}
-@media (max-width: 700px) {
-  #about > h1,
-  #dyn-text {
-    font-size: 3em;
+} */
+
+/*@media (max-width: 1024px) {
+  main section.about h1.name {
+    font-size: 6em;
     letter-spacing: 0;
-    }
-    #dyn-tex{
-      font-size: 0.5em;
-    }
-  div.divider > h3 {
-    font-size: 1.5em;
-    text-align: center;
+  }
+  #dyn-text {
+    font-size: 5em;
   }
 }
+@media (max-width: 1340px) {
+  main section.about h1.name {
+    font-size: 6em;
+    letter-spacing: 0;
+  }
+  #dyn-text {
+    font-size: 5em;
+  }
+}  */
