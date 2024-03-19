@@ -106,19 +106,15 @@ main section.about h1.name {
   letter-spacing: 0.2rem;
 }
 
-#about > article > ul > li::before{
+#about > article > ul > li::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\f058";
-  font-size:20px;
-  background-color: white;
-  border-radius:50%;
-  color: black;
+  font-size: 25px;
   margin: 0px 20px 0 0px;
-  -webkit-border-radius:50%;
-  -moz-border-radius:50%;
-  -ms-border-radius:50%;
-  -o-border-radius:50%;
+}
+#about > article > ul > li {
+  margin-bottom: 10px;
 }
 /* ? === job-me === */
 #pipe {
@@ -602,7 +598,7 @@ div.slider
   height: 100%;
   width: 45%;
 }
-.pj-item .info .desc{
+.pj-item .info .desc {
   text-align: start;
 }
 .pj-item .info .techno-used {
@@ -742,7 +738,8 @@ footer {
   justify-content: center;
   border-top: 2px solid #9e8bf9;
   /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); */
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 a {
