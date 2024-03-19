@@ -994,9 +994,8 @@ div.divider > h3 {
     transition: all 0.4s ease-in;
 }
 .active22{
-  
-  animation: show 400ms ease-in-out forwards ;
-  -webkit-animation: show 400ms ease-in-out forwards ;
+  animation: show 700ms ease-in-out forwards ;
+  -webkit-animation: show 700ms ease-in-out forwards ;
 }
 @keyframes show {
   0% {
@@ -1015,8 +1014,8 @@ div.divider > h3 {
 }
 
 .reverseAnimation {
-  animation: hide 400ms ease-in-out forwards;
-  -webkit-animation: hide 400ms ease-in-out forwards;
+  animation: hide 700ms ease-in-out forwards;
+  -webkit-animation: hide 700ms ease-in-out forwards;
 }
 
 @keyframes hide {

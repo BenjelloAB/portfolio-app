@@ -30,6 +30,7 @@ document.addEventListener("click", (event) => {
     clickedOnMsg = false; // Reset flag after outside click
   }
 });
+
 form.addEventListener("submit", function (e) {
   console.log("subed");
   e.preventDefault();
@@ -61,22 +62,27 @@ form.addEventListener("submit", function (e) {
       console.log(error + "add red card mtf");
       // result.innerHTML = "Something went wrong!";
     })
-      .then(function () {
-        form.reset();
-        return new Promise(resolve => setTimeout(resolve, 3000));
-      })
-      .then(() => {
-        notif.classList.add("reverseAnimation");
-      })
-      .then(() => {
-        return new Promise(resolve => setTimeout(resolve, 3000));
-      })
-      .then(() => {
-        notif.classList.remove("active22");
-        notif.classList.remove("reverseAnimation");
+    .then(function () {
+      form.reset();
+      return setTimeoutAsync(3000);
+    })
+    .then(() => {
+      notif.classList.add("reverseAnimation");
+      notif.addEventListener("animationend", () => {
+        if (notif.classList.contains("reverseAnimation"))
+          notif.classList.remove("reverseAnimation");
+        if (notif.classList.contains("active22"))
+          notif.classList.remove("active22");
       });
+    });
 });
 
 function removeActive() {
   notif.classList.remove("active22");
+}
+
+function setTimeoutAsync(time) {
+  return new Promise((resolve) => {
+    return setTimeout(resolve, time);
+  });
 }
