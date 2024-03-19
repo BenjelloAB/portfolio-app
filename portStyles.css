@@ -35,14 +35,16 @@ header {
   width: 100%;
   margin: auto;
   /* position: sticky; */
-  position: fixed;
-  top: 0;
+  /* position: fixed;
+  top: 0; */
   padding: 10px;
   background: rgba(255, 255, 255, 0.27);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 999;
+  padding-right: 19px;
+  padding-left: 19px;
 }
 header .logo img {
   width: 72px;
@@ -54,7 +56,7 @@ header .logo::after {
   height: 50px;
   background: white;
   z-index: -1;
-  left: 1rem;
+  left: 1.6rem;
   top: 17px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -89,7 +91,7 @@ header .socials a:hover {
 
 /* ? ===== MAIN section ==== */
 main {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   margin-left: 10%;
 }
 main section {
@@ -225,8 +227,7 @@ body > main > nav.nav-it {
   flex-direction: column;
   justify-content: space-between;
   width: 5%;
-  /*min-width: 45px;
-  */
+  /* min-width: 45px; */
   min-width: 55px;
   opacity: 0.4;
   background: black;
@@ -237,7 +238,8 @@ body > main > nav.nav-it {
   position: fixed;
   z-index: 99999;
   left: 13px;
-  top: 30%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 body > main > nav.nav-it:hover {
   opacity: 1;
@@ -403,6 +405,10 @@ div.divider > span:nth-child(odd) {
 div.divider > span:nth-child(even) {
   width: 30px;
   height: 30px;
+}
+
+#about-sec-44{
+  margin-top: 5%;
 }
 div.divider {
   display: flex;
@@ -967,3 +973,49 @@ div.divider > h3 {
     font-size: 5em;
   }
 }  */
+
+
+/* !== notification == */
+#notif{
+  padding: 13px;
+    background: white;
+    color: black;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 20px;
+    gap: 17px;
+    font-weight: bolder;
+    display: inline-flex;
+    position: absolute;
+    top: 0.4%;
+    transform: scale(1.1);
+    opacity: 0;
+    left: -20.3rem;
+    transition: all 0.4s ease-in;
+}
+.active22{
+  animation: show 400ms ease-in-out forwards ;
+  -webkit-animation: show 400ms ease-in-out forwards ;
+}
+@keyframes show {
+  0% {
+    opacity: 0 ;
+    left: -10.3rem ;
+    
+  }
+  5% {
+    opacity: 0 ;
+  }
+  100% {
+    opacity: 1 ;
+    left: 1.2rem ;
+  }
+  
+}
+#notif p {
+  font-size: 1em;
+}
+#notif i {
+  font-size: 2em;
+  color: green;
+}

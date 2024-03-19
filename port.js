@@ -3,6 +3,8 @@ const msg = document.getElementById("messageme");
 const message = document.getElementById("message");
 const email = document.getElementById("email");
 const contactIcon = document.getElementsByClassName("contacts-icon");
+const notif = document.getElementById("notif");
+const form = document.getElementById("form");
 console.log(contactIcon);
 const name = document.getElementById("name");
 let clickedOnMsg = false;
@@ -28,36 +30,45 @@ document.addEventListener("click", (event) => {
     clickedOnMsg = false; // Reset flag after outside click
   }
 });
-// contact.addEventListener("submit", (e) => {
-//   console.log("subed");
-//   //   e.preventDefault();
-//   message.value = "";
-//   email.value = "";
-//   name.value = "";
-// });
-// document.addEventListener('click', event => {
-//     const isClickInside = specifiedElement.contains(event.target)
+form.addEventListener("submit", function (e) {
+  console.log("subed");
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  // result.innerHTML = "Please wait..."
 
-//     if (!isClickInside) {
-//       // The click was OUTSIDE the specifiedElement, do something
-//     }
-//   })
-// document.addEventListener("click", (event) => {
-// //   console.log(event);
-//   if (!contact.contains(event.target) && clickedOnMsg) {
-//     contact.classList.remove("active");
-//     clickedOnMsg = false; // Reset flag after outside click
-//   }
-// });
-// msg.addEventListener("click", () => {
-//   contact.classList.toggle("active");
-// });
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: json,
+  })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        // result.innerHTML = "Form submitted successfully";
+        notif.classList.add("active22");
+      } else {
+        console.log(response);
+        // result.innerHTML = json.message;
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      // result.innerHTML = "Something went wrong!";
+    })
+    .then(function () {
+      form.reset();
+      setTimeout(() => {
+        notif.classList.remove("active22");
+        // result.style.display = "none";
+      }, 3000);
+    });
+});
 
-// console.log(contact.classList.contains("active"))
-// if (contact.classList.contains("active")) {
-//   document.addEventListener("click", (event) => {
-//     if (!contact.contains(event.target)) {
-//       contact.classList.remove("active");
-//     }
-//   });
-// }
+function removeActive() {
+  notif.classList.remove("active22");
+}
