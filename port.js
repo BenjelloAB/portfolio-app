@@ -53,7 +53,7 @@ form.addEventListener("submit", function (e) {
         notif.classList.add("active22");
       } else {
         console.log(response);
-        console.log(json)
+        console.log(json);
         // result.innerHTML = json.message;
       }
     })
@@ -61,17 +61,20 @@ form.addEventListener("submit", function (e) {
       console.log(error + "add red card mtf");
       // result.innerHTML = "Something went wrong!";
     })
-    .then(function () {
-      form.reset();
-      setTimeout(() => {
-        // notif.classList.remove("active22");
-        notif.classList.add("reverseAnimation"); 
-        // result.style.display = "none";
-      }, 3000);
+      .then(function () {
+        form.reset();
+        return new Promise(resolve => setTimeout(resolve, 3000));
+      })
+      .then(() => {
+        notif.classList.add("reverseAnimation");
+      })
+      .then(() => {
+        return new Promise(resolve => setTimeout(resolve, 3000));
+      })
+      .then(() => {
         notif.classList.remove("active22");
-        notif.classList.remove("reverseAnimation"); 
-      
-    });
+        notif.classList.remove("reverseAnimation");
+      });
 });
 
 function removeActive() {
