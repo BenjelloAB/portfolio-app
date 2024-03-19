@@ -58,15 +58,19 @@ form.addEventListener("submit", function (e) {
       }
     })
     .catch((error) => {
-      console.log(error);
+      console.log(error + "add red card mtf");
       // result.innerHTML = "Something went wrong!";
     })
     .then(function () {
       form.reset();
       setTimeout(() => {
-        notif.classList.remove("active22");
+        // notif.classList.remove("active22");
+        notif.classList.add("reverseAnimation"); 
         // result.style.display = "none";
       }, 3000);
+        notif.classList.remove("active22");
+        notif.classList.remove("reverseAnimation"); 
+      
     });
 });
 

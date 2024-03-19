@@ -986,14 +986,15 @@ div.divider > h3 {
     gap: 17px;
     font-weight: bolder;
     display: inline-flex;
-    position: absolute;
-    top: 0.4%;
+    position: fixed;
+    top: 2.4%;
     transform: scale(1.1);
     opacity: 0;
     left: -20.3rem;
     transition: all 0.4s ease-in;
 }
 .active22{
+  
   animation: show 400ms ease-in-out forwards ;
   -webkit-animation: show 400ms ease-in-out forwards ;
 }
@@ -1008,9 +1009,29 @@ div.divider > h3 {
   }
   100% {
     opacity: 1 ;
-    left: 1.2rem ;
+    left: 1.3rem ;
   }
   
+}
+
+.reverseAnimation {
+  animation: hide 400ms ease-in-out forwards;
+  -webkit-animation: hide 400ms ease-in-out forwards;
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    left: 1.2rem;
+  }
+  50% {
+    opacity: 0.4;
+    left: -10.3rem;
+  }
+  100% {
+    opacity: 0;
+    left: -20.3rem;
+  }
 }
 #notif p {
   font-size: 1em;
