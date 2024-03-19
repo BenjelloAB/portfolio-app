@@ -53,6 +53,7 @@ form.addEventListener("submit", function (e) {
         notif.classList.add("active22");
       } else {
         console.log(response);
+        console.log(json)
         // result.innerHTML = json.message;
       }
     })
