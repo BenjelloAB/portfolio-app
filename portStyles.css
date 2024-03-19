@@ -106,6 +106,20 @@ main section.about h1.name {
   letter-spacing: 0.2rem;
 }
 
+#about > article > ul > li::before{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f058";
+  font-size:20px;
+  background-color: white;
+  border-radius:50%;
+  color: black;
+  margin: 0px 20px 0 0px;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
+}
 /* ? === job-me === */
 #pipe {
   font-size: 6.7em;
@@ -582,11 +596,14 @@ div.slider
 .pj-item .info {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  /* text-align: center; */
   align-items: center;
   gap: 20px;
   height: 100%;
   width: 45%;
+}
+.pj-item .info .desc{
+  text-align: start;
 }
 .pj-item .info .techno-used {
   display: flex;
@@ -692,7 +709,7 @@ div.slider
   padding: 10px;
   border-radius: 19px;
   width: 100%;
-  border: 2px solid #e669fb;
+  border: 2px solid #9e8bf9;
 }
 #contact form textarea {
   border: none;
@@ -700,7 +717,7 @@ div.slider
   padding: 10px;
   width: 100%;
   border-radius: 9px;
-  border: 2px solid #e669fb;
+  border: 2px solid #9e8bf9;
   resize: none;
 }
 
@@ -723,7 +740,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 2px solid #e669fb;
+  border-top: 2px solid #9e8bf9;
+  /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); */
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2), 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 a {
@@ -849,7 +868,7 @@ div.divider > h3 {
   }
   #dyn-text,
   #pipe {
-    font-size: 7.1em;
+    font-size: 7em;
   }
 }
 @media (max-width: 940px) {
