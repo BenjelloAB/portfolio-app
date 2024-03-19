@@ -68,12 +68,13 @@ form.addEventListener("submit", function (e) {
     })
     .then(() => {
       notif.classList.add("reverseAnimation");
-      notif.addEventListener("animationend", () => {
-        if (notif.classList.contains("reverseAnimation"))
-          notif.classList.remove("reverseAnimation");
-        if (notif.classList.contains("active22"))
-          notif.classList.remove("active22");
-      });
+      return setTimeoutAsync(3000);
+    })
+    .then(() => {
+      if (notif.classList.contains("reverseAnimation"))
+        notif.classList.remove("reverseAnimation");
+      if (notif.classList.contains("active22"))
+        notif.classList.remove("active22");
     });
 });
 

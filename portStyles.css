@@ -1025,7 +1025,7 @@ div.divider > h3 {
   }
   50% {
     opacity: 0.4;
-    left: -10.3rem;
+    /* left: -10.3rem; */
   }
   100% {
     opacity: 0;
