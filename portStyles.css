@@ -1352,10 +1352,17 @@ Main components
     font-size: 7em;
   }
 }
-@media (max-width: 940px) {
+
+@media (max-width: 740px) {
   .slider {
     width: 100%;
     display: none;
+  }
+}
+@media (max-width: 940px) {
+  .slider {
+    width: 100%;
+    
   }
   .pj-item .info {
     width: 100%;
