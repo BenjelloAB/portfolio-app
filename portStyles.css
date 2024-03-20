@@ -1361,6 +1361,11 @@ Main components
     width: 100%;
   }
 }
+@media (max-width: 740px) {
+  #techs {
+    height: auto;
+  }
+}
 /* 
 @media (max-width: 700px) {
   #about > h1 {
