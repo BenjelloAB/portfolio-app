@@ -61,7 +61,7 @@ form.addEventListener("submit", function (e) {
           notiferr.classList.add("reverseAnimation");
           // Wait for a delay before rejecting the Promise
           setTimeout(() => {
-            Promise.reject(new Error("Error after no BOT/AI check"));
+            return Promise.reject(new Error("Error after no BOT/AI check"));
           }, 1000);
         }, 1500);
         // setTimeout(() => {
@@ -74,18 +74,6 @@ form.addEventListener("submit", function (e) {
         // });
         // result.innerHTML = json.message;
       }
-    })
-    .catch((error) => {
-      console.log(error + "add red card mtf catch error");
-      if (notif.classList.contains("reverseAnimation"))
-        notif.classList.remove("reverseAnimation");
-      if (notif.classList.contains("active22"))
-        notif.classList.remove("active22");
-      if (notiferr.classList.contains("reverseAnimation"))
-        notiferr.classList.remove("reverseAnimation");
-      if (notiferr.classList.contains("active22"))
-        notiferr.classList.remove("active22");
-      // result.innerHTML = "Something went wrong!";
     })
     .then(function () {
       form.reset();
@@ -104,6 +92,18 @@ form.addEventListener("submit", function (e) {
         notiferr.classList.remove("reverseAnimation");
       if (notiferr.classList.contains("active22"))
         notiferr.classList.remove("active22");
+    })
+    .catch((error) => {
+      console.log(error + "add red card mtf catch error");
+      if (notif.classList.contains("reverseAnimation"))
+        notif.classList.remove("reverseAnimation");
+      if (notif.classList.contains("active22"))
+        notif.classList.remove("active22");
+      if (notiferr.classList.contains("reverseAnimation"))
+        notiferr.classList.remove("reverseAnimation");
+      if (notiferr.classList.contains("active22"))
+        notiferr.classList.remove("active22");
+      // result.innerHTML = "Something went wrong!";
     });
 });
 
