@@ -48,11 +48,19 @@
       <p>Message Sent Successfully ! </p>
       <i class="fa-solid fa-circle-check"></i>
     </div>
+    <div id="notif-err">
+      <p>Error Sending Message ! </p>
+      <i class="fa-solid fa-circle-xmark"></i>
+    </div>
     <main>
       <section id="messageme">
         <i class="fa-regular fa-message"></i>
       </section>
       <section class="about" id="about">
+        <div class="shape-blob zero"></div>
+        <div class="shape-blob one"></div>
+        <div class="shape-blob two"></div>
+        <p>Hi <span class="wave">👋</span>, I am</p>
         <h1 class="name">BENJELLOUN ABDERRAHMANE</h1>
         <div class="dynamic-texts">
           <h2 class="job-me" id="dyn-text"></h2>
@@ -61,8 +69,9 @@
           <!-- <h2 class="job-me">Full Stack Developer</h2>
           <h2 class="job-me">Life Long Learner</h2> -->
         </div>
-
-        <div class="divider" id="about-sec-44">
+</section>
+<section id="about-sec-44">
+        <div class="divider">
           <span></span>
           <span></span>
           <span></span>
@@ -77,7 +86,7 @@
           <span></span>
           <span></span>
         </div>
-        <article class="about-me">
+        <!-- <article class="about-me">
           <ul>
             <li>
               Recent Computer Science graduate with a strong passion for
@@ -99,7 +108,7 @@
           <br />
 
        
-          <!-- Recent Computer Science graduate with a strong passion for technology.
+          Recent Computer Science graduate with a strong passion for technology.
           <br />
 
           Lifelong learner driven by curiosity and a desire for continuous
@@ -107,8 +116,91 @@
           9 months of experience as a Full Stack Web Developer with both
           independent and collaborative work experience. <br />
           Enthusiastic and skilled, ready for new challenges in the
-          ever-changing tech field <br /> -->
-        </article>
+          ever-changing tech field <br />
+        </article> -->
+
+        <section id="cd-timeline" class="cd-container">
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture"></div>
+    
+            <div class="cd-timeline-content">
+              <h2>ARK-X Talent Factory - Internship</h2>
+              <div class="timeline-content-info">
+                <span class="timeline-content-info-title">
+                  <i class="fa fa-certificate" aria-hidden="true"></i>
+                  Mern Stack Developer
+                </span>
+                <span class="timeline-content-info-date">
+                  <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                  June 2024 - Present
+                </span>
+              </div>
+              <p>
+                Designing and Developing Web Apps ,with the MERN Stack, and
+                collaborating with other teammates
+              </p>
+              <ul class="content-skills">
+                <li>HTML5/CSS3</li>
+                <li>React</li>
+                <li>JavaScript</li>
+                <li>NodeJs</li>
+                <li>MongoDB</li>
+                <li>TypeScript</li>
+              </ul>
+            </div>
+            <!-- cd-timeline-content -->
+          </div>
+          <!-- cd-timeline-block -->
+    
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie"></div>
+            <!-- cd-timeline-img -->
+    
+            <div class="cd-timeline-content">
+              <h2>Globale Alimentation - Internship</h2>
+              <p>
+                Creation of "gestionAgricole" : a website designed to efficiently
+                manage agricultural land and workers.
+              </p>
+              <ul class="content-skills">
+                <li>HTML5/CSS3</li>
+                <li>jQuery</li>
+                <li>JavaScript</li>
+                <li>NodeJs</li>
+                <li>Laravel</li>
+                <li>Bootstrap</li>
+                <li>MySQL</li>
+              </ul>
+    
+              <span class="cd-date">May 2023 - Jun 2023</span>
+            </div>
+            <!-- cd-timeline-content -->
+          </div>
+          <!-- cd-timeline-block -->
+    
+          <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture"></div>
+            <!-- cd-timeline-img -->
+    
+            <div class="cd-timeline-content">
+              <h2>Brighten Consulting - Internship</h2>
+              <p>Managing the company’s website and creating static pages</p>
+              <ul class="content-skills">
+                <li>HTML5/CSS3</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>WordPress</li>
+                <li>SEO</li>
+              </ul>
+              <span class="cd-date">Jul 2022 - Aug 2022</span>
+            </div>
+            <!-- cd-timeline-content -->
+          </div>
+          <!-- cd-timeline-block -->
+    
+          <!-- cd-timeline-block -->
+        </section>
+        <!-- cd-timeline -->
       </section>
       <!-- <section class="path" id="path">
 
@@ -157,12 +249,16 @@
           <img src="./imgs/postman.png" alt="" width="90px" />
           <img src="./imgs/pythonlogo.webp" alt="" width="90px" />
           <img src="./imgs/React-icon.svg.png" alt="" width="90px" />
-          <img src="./imgs/mongodb.svg" alt="" width="90px" />
+          <img src="./imgs/mongosy.webp" alt="" width="90px" />
           <img src="./imgs/typescript_5968381.png" alt="" width="90px" />
           <img src="./imgs/js_5968292.png" alt="" width="90px" />
           <!-- <i class="fa-brands fa-bootstrap"></i> -->
           <!-- <i class="fa-brands fa-css3-alt"></i> -->
           <img src="./imgs/tailwindcss.svg.png" alt="" width="90px" />
+          <img src="./imgs/figma.webp" alt="" width="90px" />
+          <img src="./imgs/ISO_C++_Logo.svg.png" alt="" width="90px" />
+          <img src="./imgs/javjovi.png" alt="" width="90px" />
+          <img src="./imgs/C_Logo.png" alt="" width="90px" />
           <!-- <i class="fa-brands fa-html5"></i> -->
           <!-- <i class="fa-brands fa-js"></i> -->
           <img src="./imgs/django-icon.svg" alt="" width="80px" />
@@ -348,7 +444,7 @@
           <ion-icon name="code-working-outline"></ion-icon>
         </a>
         <a href="#contact" class="contacts-icon">
-          <ion-icon name="share-social-outline"></ion-icon>
+          <ion-icon name="chatbubble-outline"></ion-icon>
         </a>
       </nav>
 

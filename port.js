@@ -4,6 +4,7 @@ const message = document.getElementById("message");
 const email = document.getElementById("email");
 const contactIcon = document.getElementsByClassName("contacts-icon");
 const notif = document.getElementById("notif");
+const notiferr = document.getElementById("notif-err");
 const form = document.getElementById("form");
 console.log(contactIcon);
 const name = document.getElementById("name");
@@ -54,27 +55,32 @@ form.addEventListener("submit", function (e) {
         notif.classList.add("active22");
       } else {
         console.log(response);
-        console.log(json);
+        console.log(json + "add red card mtf");
+        notiferr.classList.add("active22");
         // result.innerHTML = json.message;
       }
     })
     .catch((error) => {
-      console.log(error + "add red card mtf");
+      console.log(error + "add red card mtf catch error");
       // result.innerHTML = "Something went wrong!";
     })
     .then(function () {
       form.reset();
-      return setTimeoutAsync(3000);
+      return setTimeoutAsync(2000);
     })
     .then(() => {
       notif.classList.add("reverseAnimation");
-      return setTimeoutAsync(3000);
+      return setTimeoutAsync(2000);
     })
     .then(() => {
       if (notif.classList.contains("reverseAnimation"))
         notif.classList.remove("reverseAnimation");
       if (notif.classList.contains("active22"))
         notif.classList.remove("active22");
+      if (notiferr.classList.contains("reverseAnimation"))
+        notiferr.classList.remove("reverseAnimation");
+      if (notiferr.classList.contains("active22"))
+        notiferr.classList.remove("active22");
     });
 });
 
