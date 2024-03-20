@@ -61,7 +61,7 @@ form.addEventListener("submit", function (e) {
           notiferr.classList.add("reverseAnimation");
           // Wait for a delay before rejecting the Promise
           setTimeout(() => {
-            return Promise.reject(new Error("Error after no BOT/AI check"));
+            return Promise.reject("Error after no BOT/AI check");
           }, 1000);
         }, 1500);
         // setTimeout(() => {
