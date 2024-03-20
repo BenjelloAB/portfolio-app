@@ -1225,6 +1225,15 @@ Main components
   #pipe {
     font-size: 1.5em;
   }
+  #techs {
+    height: auto;
+  }
+  #contact {
+    width: 100%;
+  }
+  #techs {
+    height: auto;
+  }
 }
 
 @media (min-width: 312px) and (max-width: 387px) {
@@ -1236,6 +1245,15 @@ Main components
   #pipe {
     font-size: 2.1em;
   }
+  #techs {
+    height: auto;
+  }
+  #contact {
+    width: 100%;
+  }
+  #techs {
+    height: auto;
+  }
 }
 
 @media (min-width: 388px) and (max-width: 432px) {
@@ -1245,6 +1263,15 @@ Main components
   #dyn-text,
   #pipe {
     font-size: 2.3em;
+  }
+  #techs {
+    height: auto;
+  }
+  #contact {
+    width: 100%;
+  }
+  #techs {
+    height: auto;
   }
 }
 
@@ -1259,6 +1286,9 @@ Main components
   #contact {
     width: 100%;
   }
+  #techs {
+    height: auto;
+  }
 }
 
 @media (min-width: 507px) and (max-width: 589px) {
@@ -1268,6 +1298,9 @@ Main components
   #dyn-text,
   #pipe {
     font-size: 3.1em;
+  }
+  #techs {
+    height: auto;
   }
 }
 
@@ -1279,6 +1312,10 @@ Main components
   #pipe {
     font-size: 3.5em;
   }
+
+  #techs {
+    height: auto;
+  }
 }
 
 @media (min-width: 648px) and (max-width: 677px) {
@@ -1288,6 +1325,9 @@ Main components
   #dyn-text,
   #pipe {
     font-size: 4.1em;
+  }
+  #techs {
+    height: auto;
   }
 }
 
