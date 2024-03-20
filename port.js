@@ -31,6 +31,21 @@ document.addEventListener("click", (event) => {
     clickedOnMsg = false; // Reset flag after outside click
   }
 });
+function delayAndReject(error, delay) {
+  return new Promise((resolve, reject) => {
+    // setTimeout(() => {
+    //   reject(new Error(error));
+    // }, delay);
+
+    setTimeout(() => {
+        notiferr.classList.add("reverseAnimation");
+        // Wait for a delay before rejecting the Promise
+        setTimeout(() => {
+          reject(new Error(error));
+        }, 1000);
+      }, 1500);
+  });
+}
 
 form.addEventListener("submit", function (e) {
   console.log("subed");
@@ -40,6 +55,7 @@ form.addEventListener("submit", function (e) {
   const json = JSON.stringify(object);
   // result.innerHTML = "Please wait..."
 
+  
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
     headers: {
@@ -57,13 +73,14 @@ form.addEventListener("submit", function (e) {
         console.log(response);
         console.log(json + "add red card mtf");
         notiferr.classList.add("active22");
-        setTimeout(() => {
-          notiferr.classList.add("reverseAnimation");
-          // Wait for a delay before rejecting the Promise
-          setTimeout(() => {
-            throw new Error("Error after no BOT/AI check");
-          }, 1000);
-        }, 1500);
+        return delayAndReject("Error after no BOT/AI check", 2500);
+        // setTimeout(() => {
+        //   notiferr.classList.add("reverseAnimation");
+        //   // Wait for a delay before rejecting the Promise
+        //   setTimeout(() => {
+        //     throw new Error("Error after no BOT/AI check");
+        //   }, 1000);
+        // }, 1500);
         // setTimeout(() => {
         //   notiferr.classList.add("reverseAnimation");
         //   return Promise.reject(new Error("Error after no BOT/AI check"));
