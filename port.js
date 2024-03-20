@@ -57,11 +57,34 @@ form.addEventListener("submit", function (e) {
         console.log(response);
         console.log(json + "add red card mtf");
         notiferr.classList.add("active22");
+        setTimeout(() => {
+          notiferr.classList.add("reverseAnimation");
+          // Wait for a delay before rejecting the Promise
+          setTimeout(() => {
+            Promise.reject(new Error("Error after no BOT/AI check"));
+          }, 1000);
+        }, 1500);
+        // setTimeout(() => {
+        //   notiferr.classList.add("reverseAnimation");
+        //   return Promise.reject(new Error("Error after no BOT/AI check"));
+        // }, 1500);
+        // setTimeoutAsync(1500).then(() => {
+        //   notiferr.classList.add("reverseAnimation");
+        //   throw new Error("Error after no BOT/AI check");
+        // });
         // result.innerHTML = json.message;
       }
     })
     .catch((error) => {
       console.log(error + "add red card mtf catch error");
+      if (notif.classList.contains("reverseAnimation"))
+        notif.classList.remove("reverseAnimation");
+      if (notif.classList.contains("active22"))
+        notif.classList.remove("active22");
+      if (notiferr.classList.contains("reverseAnimation"))
+        notiferr.classList.remove("reverseAnimation");
+      if (notiferr.classList.contains("active22"))
+        notiferr.classList.remove("active22");
       // result.innerHTML = "Something went wrong!";
     })
     .then(function () {

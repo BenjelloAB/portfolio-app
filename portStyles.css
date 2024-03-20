@@ -1398,6 +1398,8 @@ Main components
   -moz-transition: all 0.4s ease-in;
   -ms-transition: all 0.4s ease-in;
   -o-transition: all 0.4s ease-in;
+  z-index: 99999999;
+
 }
 #notif-err {
   padding: 13px;
@@ -1419,6 +1421,8 @@ Main components
   -moz-transition: all 0.4s ease-in;
   -ms-transition: all 0.4s ease-in;
   -o-transition: all 0.4s ease-in;
+  z-index: 99999999;
+
 }
 .active22 {
   animation: show 700ms ease-in-out forwards;
